@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="financial-calculator:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/financial_calculator_jar</output-path>
+    <root id="archive" name="FinancialCalculator.jar">
+      <element id="module-output" name="financial-calculator" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/src/org/mkzh/fincalc/lib/BigDecimalMath.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
