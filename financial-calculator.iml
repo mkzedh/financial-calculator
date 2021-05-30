@@ -7,18 +7,6 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="module-library">
-      <library>
-        <CLASSES>
-          <root url="file://$MODULE_DIR$/src/org/mkzh/fincalc/lib" />
-        </CLASSES>
-        <JAVADOC />
-        <SOURCES>
-          <root url="file://$MODULE_DIR$/src/org/mkzh/fincalc/lib" />
-        </SOURCES>
-        <jarDirectory url="file://$MODULE_DIR$/src/org/mkzh/fincalc/lib" recursive="false" />
-        <jarDirectory url="file://$MODULE_DIR$/src/org/mkzh/fincalc/lib" recursive="false" type="SOURCES" />
-      </library>
-    </orderEntry>
+    <orderEntry type="library" name="big-math-2.3.0" level="project" />
   </component>
 </module>

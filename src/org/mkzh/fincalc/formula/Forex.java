@@ -16,10 +16,10 @@ public class Forex {
             ForexHelper.collectExchangeRate(args);
 
             // calculate
-            BigDecimal result = convertCalc(args.get("v"), args.get("r0"), args.get("r1"), dp);
+            BigDecimal res = convertCalc(args.get("v"), args.get("r0"), args.get("r1"), dp);
 
             // display
-            System.out.println("Converted value = " + ForexHelper.round(result, dp));
+            System.out.println("Converted value = " + ForexHelper.round(res, dp));
         }
         private static BigDecimal convertCalc(BigDecimal v, BigDecimal r0, BigDecimal r1, int dp) {
             return v.multiply(r1.divide(r0, dp+2, RoundingMode.HALF_UP));
@@ -33,11 +33,11 @@ public class Forex {
             ForexHelper.collectBidAsk(args);
 
             // calculate
-            BigDecimal[] result = transposeCalc(args.get("bid"), args.get("ask"), dp);
+            BigDecimal[] res = transposeCalc(args.get("bid"), args.get("ask"), dp);
 
             // display
-            System.out.println("Transposed bid price = " + ForexHelper.round(result[0], dp));
-            System.out.println("Transposed ask price = " + ForexHelper.round(result[1], dp));
+            System.out.println("Transposed bid price = " + ForexHelper.round(res[0], dp));
+            System.out.println("Transposed ask price = " + ForexHelper.round(res[1], dp));
         }
         private static BigDecimal[] transposeCalc(BigDecimal bid, BigDecimal ask, int dp) {
             BigDecimal[] transposed = new BigDecimal[2];
@@ -53,10 +53,10 @@ public class Forex {
             ForexHelper.collectBidAsk(args);
 
             // calculate
-            BigDecimal result = percentageSpreadCalc(args.get("bid"), args.get("ask"), dp);
+            BigDecimal res = percentageSpreadCalc(args.get("bid"), args.get("ask"), dp);
 
             // display
-            System.out.println("Percentage spread = " + ForexHelper.round(result, dp));
+            System.out.println("Percentage spread = " + ForexHelper.round(res, dp));
         }
         private static BigDecimal percentageSpreadCalc(BigDecimal bid, BigDecimal ask, int dp) {
             return ask.subtract(bid).divide(bid, dp+2, RoundingMode.HALF_UP).multiply(BigDecimal.valueOf(100));
@@ -89,12 +89,12 @@ public class Forex {
             ForexHelper.collectCrossIndirectDirect(args);
 
             // calculate
-            BigDecimal[] result = directIndirectCalc(args.get("bid0"), args.get("ask0"), args.get("bid1"), args.get("ask1"));
+            BigDecimal[] res = directIndirectCalc(args.get("bid0"), args.get("ask0"), args.get("bid1"), args.get("ask1"));
 
             // display
             System.out.println("Cross rate is in Ci/Cd (Ci = currency in indirect quote; Cd = currency in direct quote");
-            System.out.println("Cross rate bid price = " + ForexHelper.round(result[0], dp));
-            System.out.println("Cross rate ask price = " + ForexHelper.round(result[1], dp));
+            System.out.println("Cross rate bid price = " + ForexHelper.round(res[0], dp));
+            System.out.println("Cross rate ask price = " + ForexHelper.round(res[1], dp));
         }
         private static BigDecimal[] directIndirectCalc(BigDecimal bid0, BigDecimal ask0, BigDecimal bid1, BigDecimal ask1) {
             BigDecimal[] crossRate = new BigDecimal[2];
@@ -109,11 +109,11 @@ public class Forex {
             ForexHelper.collectCrossBaseTerms(args);
 
             // calculate
-            BigDecimal[] result = indirectIndirectCalc(args.get("bid0"), args.get("ask0"), args.get("bid1"), args.get("ask1"), dp);
+            BigDecimal[] res = indirectIndirectCalc(args.get("bid0"), args.get("ask0"), args.get("bid1"), args.get("ask1"), dp);
 
             // display
-            System.out.println("Cross rate bid price = " + ForexHelper.round(result[0], dp));
-            System.out.println("Cross rate ask price = " + ForexHelper.round(result[1], dp));
+            System.out.println("Cross rate bid price = " + ForexHelper.round(res[0], dp));
+            System.out.println("Cross rate ask price = " + ForexHelper.round(res[1], dp));
         }
         private static BigDecimal[] indirectIndirectCalc(BigDecimal bid0, BigDecimal ask0, BigDecimal bid1, BigDecimal ask1, int dp) {
             BigDecimal[] crossRate = new BigDecimal[2];
@@ -134,11 +134,11 @@ public class Forex {
             ForexHelper.collectInterestRateBaseTerms(args);
 
             // calculate
-            BigDecimal[] result = forwardPointsAndRateCalc(args.get("S"), args.get("f"), args.get("n"), args.get("Ib"), args.get("It"), dp);
+            BigDecimal[] res = forwardPointsAndRateCalc(args.get("S"), args.get("f"), args.get("n"), args.get("Ib"), args.get("It"), dp);
 
             // display
-            System.out.println("Forward points = " + ForexHelper.round(result[0], dp));
-            System.out.println("Forward rate = " + ForexHelper.round(result[1], dp));
+            System.out.println("Forward points = " + ForexHelper.round(res[0], dp));
+            System.out.println("Forward rate = " + ForexHelper.round(res[1], dp));
         }
         private static BigDecimal[] forwardPointsAndRateCalc(BigDecimal S, BigDecimal f, BigDecimal n, BigDecimal Ib, BigDecimal It, int dp) {
             BigDecimal[] pointsAndRate = new BigDecimal[2];

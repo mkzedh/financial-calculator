@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="BigDecimalMath">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/src/org/mkzh/fincalc/lib/BigDecimalMath.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/src/org/mkzh/fincalc/lib/BigDecimalMath.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,5 +1,5 @@
 JC = javac
-JCFLAGS = -g
+JCFLAGS = -g -cp '..:../lib/*'
 J = jar cmvf META-INF/MANIFEST.MF
 
 JFILE = org/mkzh/fincalc/*.java org/mkzh/fincalc/formula/*.java org/mkzh/fincalc/formula/helper/*.java

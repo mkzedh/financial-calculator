@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="BigDecimalMath (2)">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/lib/BigDecimalMath.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/lib/BigDecimalMath.jar!/" />
+    </SOURCES>
+  </library>
+</component>

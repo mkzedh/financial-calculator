@@ -28,7 +28,7 @@ public class DebtHelper extends Helper {
     // collect i
     public static void collectYield(Hashtable<String, BigDecimal> args) {
         collect("""
-                    Enter yield | interest rate expressed as a decimal.
+                    Enter yield | interest rate per period expressed as a decimal.
                     >\s""", "i", args);
     }
 
@@ -43,14 +43,11 @@ public class DebtHelper extends Helper {
     }
 
     // collect n
-    public static void collectInterestPeriod(Hashtable<String, BigDecimal> args) {
-        collect("""
-                    Enter days per interest/yield period (ex: 365 for a per annum rate). 
-                    For most discount securities this would be 365.
-                    >\s""", "n", args);
-        collect("""
-                    Enter days elapsed | days to maturity | term in days (ex: 730 for a two-year term).
-                    >\s""", "d", args);
+    public static void collectPeriod(Hashtable<String, BigDecimal> args) {
+        collectOneOrTwo("""
+                Enter the number of periods OR
+                Enter the number of days per period (nd) and number of days elapsed/to maturity (d) in the form (nd d).
+                >\s""", "n", "nd", "d", args);
     }
 
     // collect h

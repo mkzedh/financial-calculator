@@ -3,7 +3,7 @@
     <output-path>$PROJECT_DIR$/out/artifacts/financial_calculator_jar</output-path>
     <root id="archive" name="FinancialCalculator.jar">
       <element id="module-output" name="financial-calculator" />
-      <element id="extracted-dir" path="$PROJECT_DIR$/src/org/mkzh/fincalc/lib/BigDecimalMath.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/lib/BigDecimalMath.jar" path-in-jar="/" />
     </root>
   </artifact>
 </component>
